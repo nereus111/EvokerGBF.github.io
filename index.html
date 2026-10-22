@@ -427,7 +427,7 @@ function applyLang(l){lang=l;root.lang=l;
   $("gear").setAttribute("aria-label",t("settings"));$("aboutX").setAttribute("aria-label",t("close"));$("discX").setAttribute("aria-label",t("close"));render()}
 const fitEmbed=()=>{host.toggleAttribute("data-embed",window.self!==window.top);host.toggleAttribute("data-short",Math.min(window.innerHeight,519)===window.innerHeight);if(host.hasAttribute("data-short")&&!host.hasAttribute("data-tab"))setTab("hLack")};fitEmbed();window.addEventListener("resize",fitEmbed);
 applyTheme(getL(TK)||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));
-applyLang(getL(LK)||((navigator.language||"").toLowerCase().startsWith("id")?"id":"en"));
+applyLang(getL(LK)||"id");
 $("panel").addEventListener("click",e=>{
   const l=e.target.dataset.lang,m=e.target.dataset.th;
   if(l){setL(LK,l);applyLang(l)}
