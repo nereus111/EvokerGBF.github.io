@@ -436,7 +436,7 @@ $("panel").addEventListener("click",e=>{
 const setOpen=o=>{$("panel").hidden=!o;$("gear").setAttribute("aria-expanded",o)};
 $("gear").addEventListener("click",e=>{e.stopPropagation();setOpen($("panel").hidden)});
 document.addEventListener("click",e=>{if(!e.composedPath().includes($("panel")))setOpen(false)});
-const GITHUB_URL="";
+const GITHUB_URL="https://github.com/nereus111/EvokerGBF.github.io";
 const gh=$("ghLink");if(GITHUB_URL){gh.href=GITHUB_URL}else{gh.setAttribute("aria-disabled","true");gh.style.opacity=".55";gh.style.cursor="default";gh.addEventListener("click",e=>e.preventDefault())}
 const setAbout=o=>{const m=$("about");m.classList.toggle("open",o);m.setAttribute("aria-hidden",String(!o));if(o){setOpen(false);setTimeout(()=>$("aboutX").focus(),60)}};
 $("aboutBtn").addEventListener("click",e=>{e.stopPropagation();setAbout(true)});
